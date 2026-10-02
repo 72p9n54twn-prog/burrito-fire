@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { MapPin } from 'lucide-react'
+import { MapPin, MessageCircle } from 'lucide-react'
 import { site } from '@/lib/site'
 
 export function Hero() {
@@ -20,10 +20,13 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href="#visit"
-              className="rounded-full bg-secondary px-6 py-3 text-base font-bold text-secondary-foreground shadow-[0_4px_0_0_oklch(0.25_0.06_30)] transition-transform hover:-translate-y-0.5"
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3 text-base font-bold text-secondary-foreground shadow-[0_4px_0_0_oklch(0.25_0.06_30)] transition-transform hover:-translate-y-0.5"
             >
-              Come visit us
+              <MessageCircle className="size-5" aria-hidden="true" />
+              Order on WhatsApp
             </a>
             <a
               href={site.mapsUrl}

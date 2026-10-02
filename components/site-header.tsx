@@ -1,4 +1,4 @@
-import { Flame } from 'lucide-react'
+import { Flame, MessageCircle } from 'lucide-react'
 import { site } from '@/lib/site'
 
 export function SiteHeader() {
@@ -18,12 +18,20 @@ export function SiteHeader() {
                 About
               </a>
             </li>
+            <li className="hidden sm:block">
+              <a href="#visit" className="rounded-full px-3 py-2 transition-colors hover:bg-primary-foreground/15">
+                Visit us
+              </a>
+            </li>
             <li>
               <a
-                href="#visit"
-                className="rounded-full bg-secondary px-4 py-2 text-secondary-foreground transition-transform hover:scale-105"
+                href={site.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-4 py-2 text-secondary-foreground transition-transform hover:scale-105"
               >
-                Visit us
+                <MessageCircle className="size-4" aria-hidden="true" />
+                Order now
               </a>
             </li>
           </ul>

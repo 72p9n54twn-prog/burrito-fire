@@ -11,6 +11,10 @@ export function SiteFooter() {
         </p>
         <p className="text-sm text-primary-foreground/85">
           {site.area}, {site.street}
+          {' · '}
+          <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline">
+            WhatsApp {site.phone}
+          </a>
         </p>
       </div>
     </footer>
