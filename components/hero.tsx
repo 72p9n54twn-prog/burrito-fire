@@ -15,6 +15,10 @@ export function Hero() {
             {'Burrito '}
             <span className="text-secondary">Fire</span>
           </h1>
+          <p className="-mt-2 inline-flex items-center gap-2 text-lg font-bold text-secondary md:text-xl">
+            <MessageCircle className="size-5" aria-hidden="true" />
+            Now ordering on WhatsApp
+          </p>
           <p className="max-w-md text-xl leading-relaxed text-primary-foreground/90 text-pretty md:text-2xl">
             {site.tagline}
           </p>
